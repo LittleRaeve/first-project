@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Ethan Quandt">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="description" content="Neem contact op met Pixel Playground.">
+
+    <title>Contact - Pixel Playground</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigatiebalk -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Hoofdnavigatie">
+
+            <!-- Logo en bedrijfsnaam -->
+            <a class="brand" href="index.html">
+                <img src="afbeeldingen/logo.png" alt="Pixel Playground logo">
+                <span>PIXEL PLAYGROUND</span>
+            </a>
+
+            <!-- Navigatielinks -->
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="games.html">Games</a>
+                <a href="merch.html">Merchandise</a>
+                <a class="nav-contact" href="contact.html">Contact</a>
+                <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Schakel naar dark mode" aria-pressed="false">🌙</button>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- Hoofdinhoud -->
+    <main class="contact-page">
+
+        <h1>Contact</h1>
+
+        <form class="contact-form" action="error.html" method="get">
+
+            <div class="form-group">
+                <label for="naam">Naam</label>
+                <input type="text" id="naam" name="naam" autocomplete="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="bericht">Bericht</label>
+                <textarea id="bericht" name="bericht" rows="10" required></textarea>
+            </div>
+
+            <button type="submit" class="form-button">Verstuur</button>
+
+        </form>
+
+    </main>
+
+    <!-- Voettekst -->
+    <footer class="site-footer" id="contact">
+
+        <div class="footer-content">
+
+            <!-- Contactgegevens -->
+            <div class="footer-contact">
+                <h2>Contact</h2>
+                <p>Telefoon: <a href="tel:[telefoonnummer]">+31 20 123 4567</a></p>
+                <p>E-mail: <a href="mailto:[e-mailadres]">info@pixelplayground.example</a></p>
+            </div>
+
+            <!-- Social media -->
+            <div class="footer-social">
+                <h2>Volg ons</h2>
+                <a href="error.html" aria-label="Instagram">Instagram</a>
+                <a href="error.html" aria-label="TikTok">TikTok</a>
+                <a href="error.html" aria-label="YouTube">YouTube</a>
+            </div>
+
+            <!-- Disclaimer -->
+            <div class="footer-disclaimer">
+                <h2>Disclaimer</h2>
+                <p>
+                    De redactie van Pixel Playground doet haar best om alle informatie op deze website correct en actueel te houden. Toch kunnen er fouten of onvolledigheden voorkomen. De redactie is niet verantwoordelijk voor eventuele fouten in de informatie op deze website.</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <span class="copyright">
+                © 2026 Pixel Playground. Alle rechten voorbehouden.
+            </span>
+
+            <div class="legal-links">
+                <a href="error.html">Privacybeleid</a>
+                <a href="error.html">Gebruiksvoorwaarden</a>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
+

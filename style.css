@@ -1,0 +1,890 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Press+Start+2P&display=swap');
+
+:root {
+    --cream: #FFF4D6;
+    --orange: #FF8C42;
+    --yellow: #FFD93D;
+    --turquoise: #4ECDC4;
+    --blue: #3568B8;
+    --ink: #171827;
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+}
+
+/* Navigatie */
+.site-header {
+    border-bottom: 4px solid var(--blue);
+}
+
+.navbar {
+    max-width: 1440px;
+    margin: auto;
+    padding: 16px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--blue);
+    font: 12px 'Press Start 2P', cursive;
+    text-decoration: none;
+}
+
+.brand img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--blue);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: var(--ink);
+}
+
+.nav-links .nav-contact {
+    padding: 9px 14px;
+    background: var(--orange);
+    color: var(--ink);
+    border: 3px solid var(--ink);
+    box-shadow: 3px 3px var(--ink);
+}
+
+/* Algemene inhoud */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    padding: 60px 4% 88px;
+}
+
+.intro {
+    max-width: 760px;
+    margin: 0 auto 64px;
+    text-align: center;
+}
+
+.Titel {
+    display: inline-block;
+    padding: 8px 14px;
+    margin-bottom: 20px;
+    background: var(--turquoise);
+    border: 3px solid var(--ink);
+    font-weight: 800;
+}
+
+h1 {
+    margin: 56px 0 44px;
+    color: var(--blue);
+    font: 24px/1.6 'Press Start 2P', cursive;
+    text-align: center;
+}
+
+.intro h1 {
+    margin: 0;
+}
+
+.intro p {
+    font-size: 18px;
+}
+
+/* Merchandise */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+    width: 100%;
+}
+
+.cards .card {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+    background: var(--white);
+    border: 3px solid var(--ink);
+    box-shadow: 5px 5px 0 var(--turquoise);
+    transition: transform 0.2s;
+}
+
+.cards .card:hover {
+    transform: translateY(-3px);
+}
+
+.cards .card-image {
+    position: relative;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: 3px solid var(--ink);
+}
+
+.cards .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.image-yellow {
+    background: var(--yellow);
+}
+
+.image-turquoise {
+    background: var(--turquoise);
+}
+
+.image-orange {
+    background: var(--orange);
+}
+
+.cards .card-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 20px 25px 25px;
+}
+
+.cards .card h2,
+.games-grid .card h2 {
+    color: var(--blue);
+    font: 13px/1.8 'Press Start 2P', cursive;
+}
+
+.cards .card h2 {
+    margin-bottom: 12px;
+}
+
+.cards .card p {
+    margin-bottom: 4px;
+    font-size: 18px;
+}
+
+.cards .card-content a {
+    margin-top: 16px;
+    color: var(--blue);
+    font-size: 18px;
+    font-weight: 800;
+}
+
+/* Prijs en bestelknop */
+.cards .card-image .merch-price {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    bottom: 18px;
+    padding: 12px 16px;
+    background: var(--yellow);
+    color: var(--ink);
+    border: 3px solid var(--ink);
+    box-shadow: 4px 4px var(--ink);
+    font: 10px 'Press Start 2P', cursive;
+    opacity: 0;
+    transform: translate(-50%, 10px);
+    transition: 0.2s;
+}
+
+.cards .card:has(.image-turquoise) .merch-price {
+    background: var(--turquoise);
+}
+
+.cards .card:has(.image-orange) .merch-price {
+    background: var(--orange);
+}
+
+.cards .card-image:hover .merch-price {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+@media (hover: none) {
+    .cards .card-image .merch-price {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+.cards .card-content label {
+    margin: 15px 0 5px;
+    font-weight: 800;
+}
+
+.cards .card-content select,
+.cards .card-content button {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--ink);
+    font: inherit;
+}
+
+.cards .card-content select {
+    margin-bottom: 15px;
+    background: var(--white);
+}
+
+.cards .card-content button {
+    background: var(--orange);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.cards .card-content button:hover {
+    background: var(--yellow);
+}
+
+/* Games */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 42px;
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+}
+
+.games-grid .card {
+    display: flex;
+    flex-direction: column;
+    min-height: 275px;
+    overflow: hidden;
+    background: var(--white);
+    border: 3px solid var(--ink);
+    box-shadow: 5px 5px 0 var(--turquoise);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.games-grid .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 7px 7px 0 var(--turquoise);
+}
+
+/* Game-afbeeldingen */
+.games-grid .thumb {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: transparent;
+    border-bottom: 3px solid var(--ink);
+}
+
+.games-grid .thumb img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.games-grid .card:hover .thumb img {
+    transform: scale(1.04);
+}
+
+/* Game-informatie */
+.games-grid .card-content {
+    flex: 1;
+    padding: 20px;
+    background: var(--white);
+}
+
+.games-grid .card h2 {
+    margin: 0;
+    color: var(--blue);
+    font: 13px/1.8 'Press Start 2P', cursive;
+}
+
+.games-grid .card p {
+    margin: 16px 0 0;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .games-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobiel */
+@media (max-width: 600px) {
+    .games-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+/* Footer */
+.site-footer {
+    background: var(--blue);
+    color: var(--white);
+    border-top: 4px solid var(--ink);
+}
+
+.footer-content {
+    max-width: 1440px;
+    margin: auto;
+    padding: 30px 4%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.footer-contact,
+.footer-social,
+.footer-disclaimer {
+    padding: 18px;
+    border: 3px solid var(--ink);
+    box-shadow: 5px 5px 0 var(--ink);
+}
+
+.footer-content h2 {
+    margin-bottom: 12px;
+    color: var(--yellow);
+    font: 11px/1.8 'Press Start 2P', cursive;
+}
+
+.footer-content p {
+    margin-bottom: 8px;
+}
+
+.footer-content a {
+    color: var(--white);
+    font-weight: 700;
+}
+
+.footer-content a:hover {
+    color: var(--yellow);
+}
+
+.footer-social a {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.footer-disclaimer p {
+    font-size: 13px;
+}
+
+.footer-bottom {
+    max-width: 1440px;
+    margin: auto;
+    padding: 18px 4%;
+    border-top: 3px solid var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-top {
+    max-width: 1440px;
+    margin: auto;
+    padding: 28px 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.legal-links {
+    display: flex;
+    gap: 20px;
+}
+
+.site-footer a {
+    color: var(--white);
+}
+
+.copyright {
+    opacity: 0.85;
+}
+
+/* 404-pagina */
+.error-page {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.error-content {
+    max-width: 600px;
+    padding: 40px;
+    background: var(--turquoise);
+    border: 4px solid var(--ink);
+    box-shadow: 8px 8px var(--ink);
+}
+
+.error-content h1 {
+    margin: 0 0 25px;
+    color: var(--orange);
+    font: 48px 'Press Start 2P', cursive;
+    text-shadow: 4px 4px var(--ink);
+}
+
+.error-content h2 {
+    margin-bottom: 20px;
+    font: 20px 'Press Start 2P', cursive;
+}
+
+.error-content p {
+    margin-bottom: 15px;
+}
+
+.home-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 20px;
+    background: var(--yellow);
+    border: 3px solid var(--ink);
+    box-shadow: 4px 4px var(--ink);
+    color: var(--ink);
+    font: 10px 'Press Start 2P', cursive;
+    text-decoration: none;
+}
+
+.home-button:hover {
+    transform: translate(3px, 3px);
+    box-shadow: 1px 1px var(--ink);
+}
+
+/* Pixel-effect op merchandise-afbeeldingen */
+.cards .card-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.18;
+    background-image:
+        linear-gradient(45deg, white 25%, transparent 25%, transparent 75%, white 75%),
+        linear-gradient(45deg, white 25%, transparent 25%, transparent 75%, white 75%);
+    background-position: 0 0, 16px 16px;
+    background-size: 32px 32px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .cards {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .cards .card {
+        flex: 1 1 calc(50% - 15px);
+    }
+
+    .games-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+/* Kleine tablets en mobiel */
+@media (max-width: 750px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Mobiel */
+@media (max-width: 600px) {
+    .cards,
+    .navbar {
+        flex-direction: column;
+    }
+
+    .cards .card {
+        width: 100%;
+    }
+
+    .games-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .nav-links,
+    .legal-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .intro h1 {
+        font-size: 16px;
+    }
+
+    .intro p {
+        font-size: 15px;
+    }
+
+    main {
+        padding: 30px 20px 40px;
+    }
+
+    h1 {
+        font-size: 18px;
+        margin: 35px 0;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .error-content h1 {
+        font-size: 38px;
+    }
+
+    .error-content h2 {
+        font-size: 15px;
+    }
+}
+
+/* Actieve link in de navigatie */
+.nav-links a.active {
+    padding-bottom: 2px;
+    border-bottom: 4px solid var(--yellow);
+}
+
+/* Homepagina */
+.home {
+    text-align: center;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.tag-badge {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    background: var(--turquoise);
+    border: 3px solid var(--ink);
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.hero-title {
+    max-width: 900px;
+    margin: 0 0 40px;
+    font-size: 36px;
+    line-height: 1.6;
+}
+
+.hero-subtitle {
+    max-width: 720px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 28px;
+    border: 3px solid var(--ink);
+    box-shadow: 4px 4px var(--ink);
+    color: var(--ink);
+    font-size: 18px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: translate(3px, 3px);
+    box-shadow: 1px 1px var(--ink);
+}
+
+.btn-primary { background: var(--orange); }
+.btn-secondary { background: var(--white); }
+
+.display-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 30px 50px;
+    background: #C0CBE2;
+    border: 3px solid var(--ink);
+    box-shadow: 10px 10px 0 var(--yellow);
+}
+
+.box-title {
+    margin-bottom: 30px;
+    color: var(--blue);
+    font: 16px/1.6 'Press Start 2P', cursive;
+}
+
+.display-box .games-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.display-box .games-grid .card {
+    min-height: 0;
+    text-align: left;
+}
+
+@media (max-width: 900px) {
+    .display-box .games-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-title { font-size: 20px; }
+    .hero-subtitle { font-size: 15px; }
+    .display-box { padding: 30px 20px; }
+    .box-title { font-size: 12px; }
+}
+
+/* Game-foto's: altijd de volle breedte van het kader */
+.games-grid .card .thumb {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: none;
+}
+
+.games-grid .card .thumb img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* Contactpagina */
+.contact-page h1 {
+    margin: 0 0 50px;
+    font-size: 32px;
+}
+
+.contact-form {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 16px;
+    background: var(--white);
+    color: var(--ink);
+    border: 3px solid var(--ink);
+    border-radius: 0;
+    font: inherit;
+    font-size: 18px;
+}
+
+.form-group textarea {
+    min-height: 280px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    box-shadow: 4px 4px 0 var(--turquoise);
+}
+
+.form-button {
+    width: 100%;
+    padding: 18px;
+    margin-top: 10px;
+    background: var(--orange);
+    color: var(--ink);
+    border: 3px solid var(--ink);
+    box-shadow: 5px 5px 0 var(--ink);
+    font: inherit;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.form-button:hover {
+    background: var(--yellow);
+    transform: translate(3px, 3px);
+    box-shadow: 2px 2px 0 var(--ink);
+}
+
+@media (max-width: 600px) {
+    .contact-page h1 { font-size: 22px; margin-bottom: 30px; }
+    .form-group input,
+    .form-group textarea { font-size: 16px; }
+}
+
+
+/* Dark mode-knop */
+:root {
+    --on-accent: #171827;
+}
+
+.theme-toggle {
+    width: 44px;
+    height: 44px;
+    background: var(--white);
+    color: var(--ink);
+    border: 3px solid var(--ink);
+    box-shadow: 3px 3px var(--ink);
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.theme-toggle:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px var(--ink);
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+    color-scheme: dark;
+    --cream: #151728;
+    --white: #23263F;
+    --ink: #F3EEDC;
+    --blue: #7FA8F0;
+}
+
+/* Tekst op felle kleurvlakken blijft donker */
+[data-theme="dark"] .nav-links .nav-contact,
+[data-theme="dark"] .Titel,
+[data-theme="dark"] .tag-badge,
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .cards .card-image .merch-price,
+[data-theme="dark"] .cards .card-content button,
+[data-theme="dark"] .home-button,
+[data-theme="dark"] .form-button,
+[data-theme="dark"] .error-content {
+    color: var(--on-accent);
+}
+
+[data-theme="dark"] .cards .card-content button:hover,
+[data-theme="dark"] .form-button:hover {
+    color: var(--on-accent);
+}
+
+[data-theme="dark"] .error-content h1 {
+    color: var(--orange);
+    text-shadow: 4px 4px #171827;
+}
+
+[data-theme="dark"] .error-content,
+[data-theme="dark"] .home-button {
+    border-color: #171827;
+}
+
+/* Thuispagina */
+[data-theme="dark"] .display-box {
+    background: #20264A;
+}
+
+/* Footer blijft blauw, met witte tekst */
+[data-theme="dark"] .site-footer {
+    background: #1B2F5E;
+    color: #FFFFFF;
+    border-top-color: #0D1020;
+}
+
+[data-theme="dark"] .site-footer a,
+[data-theme="dark"] .footer-content a {
+    color: #FFFFFF;
+}
+
+[data-theme="dark"] .site-footer a:hover,
+[data-theme="dark"] .footer-content a:hover {
+    color: var(--yellow);
+}
+
+[data-theme="dark"] .footer-contact,
+[data-theme="dark"] .footer-social,
+[data-theme="dark"] .footer-disclaimer {
+    border-color: #0D1020;
+    box-shadow: 5px 5px 0 #0D1020;
+}
+
+[data-theme="dark"] .footer-bottom {
+    border-top-color: #0D1020;
+}
+
+@media (max-width: 600px) {
+    .theme-toggle { width: 40px; height: 40px; }
+}
+
