@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Jamie Hoitingh">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="description" content="Ontdek de merchandise van Pixel Playground.">
+
+    <title>Merchandise - Pixel Playground</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <!-- Navigatiebalk -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Hoofdnavigatie">
+
+            <!-- Logo en bedrijfsnaam -->
+            <a class="brand" href="index.html">
+                <img src="afbeeldingen/logo.png" alt="Pixel Playground logo">
+                <span>PIXEL PLAYGROUND</span>
+            </a>
+
+            <!-- Navigatielinks -->
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="games.html">Games</a>
+                <a href="merch.html">Merchandise</a>
+                <a class="nav-contact" href="contact.html">Contact</a>
+                <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Schakel naar dark mode" aria-pressed="false">🌙</button>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- Hoofdinhoud -->
+    <main>
+
+        <!-- Introductie -->
+        <section class="intro">
+            <span class="Titel">Merchandise 2026</span>
+            <h1>Uitgelichte merchandise van 2026</h1>
+            <p>Ontdek de drie bestverkochte merchandise-artikelen van Pixel Playground.</p>
+        </section>
+
+        <!-- Merchandise producten -->
+        <section class="cards" aria-label="Merchandise producten">
+
+            <!-- Product 1 -->
+            <article class="card">
+
+                <div class="card-image image-yellow">
+                    <img src="afbeeldingen/merch/shirt.png"
+                         alt="Pixel Playground T-shirt">
+
+                    <span class="merch-price">€19,95</span>
+                </div>
+
+                <div class="card-content">
+                    <h2>Pixel T-shirt</h2>
+                    <p>Draag je favoriete pixels. Een comfortabel shirt voor iedereen die een beetje retro-gaming aan zijn dagelijkse outfit wil toevoegen.</p>
+
+                    <label for="aantal-tshirt">Aantal:</label>
+                    <select id="aantal-tshirt" name="aantal-tshirt">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+
+                    <button type="button">Bestellen</button>
+                </div>
+
+            </article>
+
+            <!-- Product 2 -->
+            <article class="card">
+
+                <div class="card-image image-turquoise">
+                    <img src="afbeeldingen/merch/mok.png"
+                         alt="Pixel Playground mok">
+
+                    <span class="merch-price">€12,95</span>
+                </div>
+
+                <div class="card-content">
+                    <h2>Pixel Mok</h2>
+                    <p>Geef je ochtend een boost. Begin je dag met een beetje arcade-nostalgie, pixel voor pixel.</p>
+
+                    <label for="aantal-mok">Aantal:</label>
+                    <select id="aantal-mok" name="aantal-mok">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+
+                    <button type="button">Bestellen</button>
+                </div>
+
+            </article>
+
+            <!-- Product 3 -->
+            <article class="card">
+
+                <div class="card-image image-orange">
+                    <img src="afbeeldingen/merch/stickers.png"
+                         alt="Pixel Playground stickers">
+
+                    <span class="merch-price">€4,95</span>
+                </div>
+
+                <div class="card-content">
+                    <h2>Pixel Stickers</h2>
+                    <p>Geef je laptop, telefoon of game-opstelling een kleurrijke pixel-upgrade.</p>
+
+                    <label for="aantal-stickers">Aantal:</label>
+                    <select id="aantal-stickers" name="aantal-stickers">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+
+                    <button type="button">Bestellen</button>
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- Voettekst -->
+    <footer class="site-footer" id="contact">
+
+        <div class="footer-content">
+
+            <!-- Contactgegevens -->
+            <div class="footer-contact">
+                <h2>Contact</h2>
+                <p>Telefoon: <a href="tel:[telefoonnummer]">+31 20 123 4567</a></p>
+                <p>E-mail: <a href="mailto:[e-mailadres]">info@pixelplayground.example</a></p>
+            </div>
+
+            <!-- Social media -->
+            <div class="footer-social">
+                <h2>Volg ons</h2>
+                <a href="error.html" aria-label="Instagram">Instagram</a>
+                <a href="error.html" aria-label="TikTok">TikTok</a>
+                <a href="error.html" aria-label="YouTube">YouTube</a>
+            </div>
+
+            <!-- Disclaimer -->
+            <div class="footer-disclaimer">
+                <h2>Disclaimer</h2>
+                <p>De redactie van Pixel Playground doet haar best om alle informatie op deze website correct en actueel te houden. Toch kunnen er fouten of onvolledigheden voorkomen. De redactie is niet verantwoordelijk voor eventuele fouten in de informatie op deze website.</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <span class="copyright">
+                © 2026 Pixel Playground. Alle rechten voorbehouden.
+            </span>
+
+            <div class="legal-links">
+                <a href="error.html">Privacybeleid</a>
+                <a href="error.html">Gebruiksvoorwaarden</a>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
