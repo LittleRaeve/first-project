@@ -1,11 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <meta name="author" content="Ethan Quandt">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="description" content="Ontdek de games van Pixel Playground.">
+
+    <title>Home - Pixel Playground</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
+
 <body>
-    
+
+    <!-- Navigatiebalk -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Hoofdnavigatie">
+
+            <!-- Logo en bedrijfsnaam -->
+            <a class="brand" href="index.html">
+                <img src="afbeeldingen/logo.png" alt="Pixel Playground logo">
+                <span>PIXEL PLAYGROUND</span>
+            </a>
+
+            <!-- Navigatielinks -->
+            <div class="nav-links">
+                <a class="active" href="index.html">Home</a>
+                <a href="games.html">Games</a>
+                <a href="merch.html">Merchandise</a>
+                <a class="nav-contact" href="contact.html">Contact</a>
+                <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Schakel naar dark mode" aria-pressed="false">🌙</button>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- Hoofdinhoud -->
+    <main class="home">
+
+        <section class="hero">
+            <div class="tag-badge">Speels &amp; kleurrijk</div>
+            <h1 class="hero-title">Press start voor je volgende favoriete spel</h1>
+
+            <p class="hero-subtitle">
+                Korte, vrolijke introductie over Pixel Playground: spelletjes en merchandise in een kleurrijke retro-stijl.
+            </p>
+
+            <div class="cta-buttons">
+                <a href="games.html" class="btn btn-primary">Bekijk games</a>
+                <a href="merch.html" class="btn btn-secondary">Merchandise</a>
+            </div>
+        </section>
+
+        <section class="display-box" aria-label="Top 3 games">
+            <h2 class="box-title">Top 3 games</h2>
+
+            <div class="games-grid">
+
+                <!-- Game 1 -->
+                <article class="card">
+                    <figure class="thumb">
+                        <img src="afbeeldingen/games/red dead redemption 2.jpg"
+                             alt="Red Dead Redemption 2">
+                    </figure>
+                    <div class="card-content">
+                        <h2>Red Dead Redemption 2</h2>
+                        <p>Beleef het Wilde Westen als Arthur Morgan in een uitgestrekte wereld vol avonturen, gevaar en spannende missies.</p>
+                    </div>
+                </article>
+
+                <!-- Game 2 -->
+                <article class="card">
+                    <figure class="thumb">
+                        <img src="afbeeldingen/games/the witcher 3.jpg"
+                             alt="The Witcher 3: Wild Hunt">
+                    </figure>
+                    <div class="card-content">
+                        <h2>The Witcher 3: Wild Hunt</h2>
+                        <p>Verken een fantasierijke wereld als Geralt of Rivia en jaag op monsters tijdens een episch avontuur.</p>
+                    </div>
+                </article>
+
+                <!-- Game 3 -->
+                <article class="card">
+                    <figure class="thumb">
+                        <img src="afbeeldingen/games/baldur's gate 3.jpg"
+                             alt="Baldur's Gate 3">
+                    </figure>
+                    <div class="card-content">
+                        <h2>Baldur's Gate 3</h2>
+                        <p>Stel je eigen heldenteam samen, verken mysterieuze gebieden en beleef een groots avontuur vol keuzes en magie.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Voettekst -->
+    <footer class="site-footer" id="contact">
+
+        <div class="footer-content">
+
+            <!-- Contactgegevens -->
+            <div class="footer-contact">
+                <h2>Contact</h2>
+                <p>Telefoon: <a href="tel:[telefoonnummer]">+31 20 123 4567</a></p>
+                <p>E-mail: <a href="mailto:[e-mailadres]">info@pixelplayground.example</a></p>
+            </div>
+
+            <!-- Social media -->
+            <div class="footer-social">
+                <h2>Volg ons</h2>
+                <a href="error.html" aria-label="Instagram">Instagram</a>
+                <a href="error.html" aria-label="TikTok">TikTok</a>
+                <a href="error.html" aria-label="YouTube">YouTube</a>
+            </div>
+
+            <!-- Disclaimer -->
+            <div class="footer-disclaimer">
+                <h2>Disclaimer</h2>
+                <p>
+                    De redactie van Pixel Playground doet haar best om alle informatie op deze website correct en actueel te houden. Toch kunnen er fouten of onvolledigheden voorkomen. De redactie is niet verantwoordelijk voor eventuele fouten in de informatie op deze website.</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <span class="copyright">
+                © 2026 Pixel Playground. Alle rechten voorbehouden.
+            </span>
+
+            <div class="legal-links">
+                <a href="error.html">Privacybeleid</a>
+                <a href="error.html">Gebruiksvoorwaarden</a>
+            </div>
+        </div>
+
+    </footer>
+
 </body>
+
 </html>
